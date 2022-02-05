@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/app.dir/src/main.cpp.obj"
+  "CMakeFiles/app.dir/src/unique_ptr.cpp.obj"
   "app.exe"
   "app.exe.manifest"
   "app.pdb"

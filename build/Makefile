@@ -141,32 +141,32 @@ app/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\app.dir\build.make CMakeFiles/app.dir/build
 .PHONY : app/fast
 
-src/main.obj: src/main.cpp.obj
+src/unique_ptr.obj: src/unique_ptr.cpp.obj
 
-.PHONY : src/main.obj
+.PHONY : src/unique_ptr.obj
 
 # target to build an object file
-src/main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\app.dir\build.make CMakeFiles/app.dir/src/main.cpp.obj
-.PHONY : src/main.cpp.obj
+src/unique_ptr.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\app.dir\build.make CMakeFiles/app.dir/src/unique_ptr.cpp.obj
+.PHONY : src/unique_ptr.cpp.obj
 
-src/main.i: src/main.cpp.i
+src/unique_ptr.i: src/unique_ptr.cpp.i
 
-.PHONY : src/main.i
+.PHONY : src/unique_ptr.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\app.dir\build.make CMakeFiles/app.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+src/unique_ptr.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\app.dir\build.make CMakeFiles/app.dir/src/unique_ptr.cpp.i
+.PHONY : src/unique_ptr.cpp.i
 
-src/main.s: src/main.cpp.s
+src/unique_ptr.s: src/unique_ptr.cpp.s
 
-.PHONY : src/main.s
+.PHONY : src/unique_ptr.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\app.dir\build.make CMakeFiles/app.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+src/unique_ptr.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\app.dir\build.make CMakeFiles/app.dir/src/unique_ptr.cpp.s
+.PHONY : src/unique_ptr.cpp.s
 
 # Help Target
 help:
@@ -177,9 +177,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... app
-	@echo ... src/main.obj
-	@echo ... src/main.i
-	@echo ... src/main.s
+	@echo ... src/unique_ptr.obj
+	@echo ... src/unique_ptr.i
+	@echo ... src/unique_ptr.s
 .PHONY : help
 
 

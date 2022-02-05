@@ -75,27 +75,28 @@ include CMakeFiles/app.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/app.dir/flags.make
 
-CMakeFiles/app.dir/src/main.cpp.obj: CMakeFiles/app.dir/flags.make
-CMakeFiles/app.dir/src/main.cpp.obj: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\my_projects\C_learn\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/app.dir/src/main.cpp.obj"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\app.dir\src\main.cpp.obj -c D:\my_projects\C_learn\src\main.cpp
+CMakeFiles/app.dir/src/unique_ptr.cpp.obj: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/src/unique_ptr.cpp.obj: CMakeFiles/app.dir/includes_CXX.rsp
+CMakeFiles/app.dir/src/unique_ptr.cpp.obj: ../src/unique_ptr.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\my_projects\C_learn\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/app.dir/src/unique_ptr.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\app.dir\src\unique_ptr.cpp.obj -c D:\my_projects\C_learn\src\unique_ptr.cpp
 
-CMakeFiles/app.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/app.dir/src/main.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\my_projects\C_learn\src\main.cpp > CMakeFiles\app.dir\src\main.cpp.i
+CMakeFiles/app.dir/src/unique_ptr.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/app.dir/src/unique_ptr.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\my_projects\C_learn\src\unique_ptr.cpp > CMakeFiles\app.dir\src\unique_ptr.cpp.i
 
-CMakeFiles/app.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/main.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\my_projects\C_learn\src\main.cpp -o CMakeFiles\app.dir\src\main.cpp.s
+CMakeFiles/app.dir/src/unique_ptr.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/unique_ptr.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\my_projects\C_learn\src\unique_ptr.cpp -o CMakeFiles\app.dir\src\unique_ptr.cpp.s
 
 # Object files for target app
 app_OBJECTS = \
-"CMakeFiles/app.dir/src/main.cpp.obj"
+"CMakeFiles/app.dir/src/unique_ptr.cpp.obj"
 
 # External object files for target app
 app_EXTERNAL_OBJECTS =
 
-app.exe: CMakeFiles/app.dir/src/main.cpp.obj
+app.exe: CMakeFiles/app.dir/src/unique_ptr.cpp.obj
 app.exe: CMakeFiles/app.dir/build.make
 app.exe: CMakeFiles/app.dir/linklibs.rsp
 app.exe: CMakeFiles/app.dir/objects1.rsp

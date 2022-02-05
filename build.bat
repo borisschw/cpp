@@ -8,7 +8,7 @@ set source_folder=D:\my_projects\C_learn\
 @REM make clean
 
 echo Generate
-cmake -S %source_folder% -B %build_folder% -G "MinGW Makefiles"
+cmake -DCMAKE_BUILD_TYPE=Debug -S %source_folder% -B %build_folder% -G "MinGW Makefiles"
 
 echo Make
 cd %build_folder%

@@ -4,12 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/my_projects/C_learn/src/main.cpp" "D:/my_projects/C_learn/build/CMakeFiles/app.dir/src/main.cpp.obj"
+  "D:/my_projects/C_learn/src/unique_ptr.cpp" "D:/my_projects/C_learn/build/CMakeFiles/app.dir/src/unique_ptr.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../include"
   )
 
 # Targets to which this target links.

@@ -1,69 +1,50 @@
-// #include <iostream>
-// #include "..\include\vector.h"
-
-// using namespace std;
-
-// // double sqrt(double);
-
-
-
-// // Vector::operator[](int i)// definition of subscripting
-// // {
-// //     return elem[i];
-// // }
-
-// // Vector::Vector(int s)// definition of the constructor
-// //     :elem{new double[s]},sz{s}// initialize members
-// // {
-
-// // }
-// // Vector::size()
-// // {
-// //     return sz;
-// // }
-
-
-// int main()
-// {
-//     int v[] = {0,1,2,3,4,5,6,7,8,9};
-
-//     /*
-//     for every element of v, from the first to the last, place
-//     a copy in x and print it.
-//     */
-//     for (auto x : v) // add 1 to each x in v
-//     {
-//         ++x;
-//         cout << x << endl;
-//     }
-
-
-//     /*
-//     If we didn’t want to copy the values from v into the variable x, but rather just have x refer to an
-//     element, we could write:
-//     */
-//     for (auto &x : v) // add 1 to each x in v
-//     {
-//         ++x;
-//         cout << x << endl;
-//     }
-// }
-
 #include <iostream>
+#include <vector.h>
+#include <cmath>
 using namespace std;
+void in_order(struct node*);
 
-template <class T, class U>
-void bubbleSort(T a[], U n) {
-    cout << a[1];
-    cout<< "\n";
-    cout << n;
+
+struct node {
+    int data;
+    struct node* left;
+    struct node* right;
+};
+
+
+struct node* new_node(int data)
+{
+  struct node* node = (struct node *)malloc(sizeof(struct node));
+  node->data = data;
+  node->left = NULL;
+  node->right = NULL;
+  return node;
 }
 
-// Driver Code
-int main() {
-    int a[5] = {10, 50, 30, 40, 20};
-    char ch = 'a';
-    int n = sizeof(a) / sizeof(a[0]);
-    bubbleSort<int,char>(a, ch);
-  return 0;
+void in_order(struct node* node)
+{
+    if(node == NULL)
+      return;
+    printf("%d\n",node->data);
+    in_order(node->left);
+    in_order(node->right);
 }
+
+int main()
+{
+  struct node * root = new_node(4);
+  /*------*/
+  root->left = new_node(2);
+  root->right = new_node(6);
+  /*------*/
+  root->left->left = new_node(1);
+  root->left->right = new_node(3);
+
+  root->right->left = new_node(5);
+  root->right->right = new_node(7);
+  /*------*/
+  in_order(root);
+
+}
+
+
