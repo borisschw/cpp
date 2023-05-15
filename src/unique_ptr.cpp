@@ -18,8 +18,10 @@ int main()
 {
     // Use the default constructor.
     std::unique_ptr<Vec3> v1 = std::make_unique<Vec3>();
+
     // Use the constructor that matches these arguments
     std::unique_ptr<Vec3> v2 = std::make_unique<Vec3>(0,1,2);
+
     // Create a unique_ptr to an array of 5 elements
     std::unique_ptr<Vec3[]> v3 = std::make_unique<Vec3[]>(5);
 

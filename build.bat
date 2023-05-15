@@ -14,8 +14,10 @@ echo Make
 cd %build_folder%
 make
 
+echo ------------------------
+echo --Exectute the program--
+echo ------------------------
 
 
-echo Exectute the program
 app.exe
 cd ..
