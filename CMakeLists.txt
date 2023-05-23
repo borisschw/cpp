@@ -12,7 +12,9 @@ add_executable(${TARGET_NAME}
                                 # src/uniqwe_pointers_2.cpp
                                 # src/deligate_pattern.cpp
                                 # src/pass_function.cpp
-                                src/lambda_exp.cpp
+                                # src/lambda_exp.cpp
+                                src/deligate_pattern_custom.cpp
+                                # src/deligate_dp_simple.cpp
 )
 
 target_include_directories(${TARGET_NAME} PUBLIC include)
