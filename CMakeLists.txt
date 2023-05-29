@@ -13,8 +13,9 @@ add_executable(${TARGET_NAME}
                                 # src/deligate_pattern.cpp
                                 # src/pass_function.cpp
                                 # src/lambda_exp.cpp
-                                src/deligate_pattern_custom.cpp
+                                src/dp_ch1.cpp
                                 # src/deligate_dp_simple.cpp
+                                # src/strategy.cpp
 )
 
 target_include_directories(${TARGET_NAME} PUBLIC include)
