@@ -5,6 +5,15 @@ public:
     virtual void fly() const= 0;
 };
 
+class FlyRocketPowered:public FlyBehavior{
+public:
+    void fly()const override {
+        std::cout<<"I'm flying like a rocket!!!" << std::endl;
+    }
+};
+
+
+
 class FlyWithWings:public FlyBehavior{
 public:
     void fly()const override {
@@ -46,6 +55,27 @@ class Squeak:public QuackBehavior {
     }
 };
 
+
+class DuckCall{
+
+    private:
+    QuackBehavior *qb;
+    public:
+    DuckCall(QuackBehavior *qb): qb(qb){}
+
+
+    void performQuack()const
+    {
+        qb->quack();
+    }
+
+    void setQuckBehaviour(QuackBehavior *qb){
+        this->qb = qb;
+    }
+
+
+};
+
 class Duck
 {
     private:
@@ -79,20 +109,22 @@ class Duck
     void swim() {
     std::cout<<"All ducks float, even decoys!" << std::endl;
     }
-
-    private:
-    std::function<void()> m_Callback;
-
 };
 
 int main()
 {
-
+    //different "strategies"
     FlyWithWings reallyFly;
     FlyNoWay nofly;
+    FlyRocketPowered rocket_fly;
+
     Quack quak;
     Squeak squeak;
+
+
     Duck duck(&nofly, &quak);
+
+    DuckCall duck_call(&quak);
 
     duck.performFly();
     duck.performQuack();
@@ -100,9 +132,15 @@ int main()
     duck.setFlyBehaviour(&reallyFly);
     duck.setQuckBehaviour(&squeak);
 
+
     duck.performFly();
     duck.performQuack();
 
+    duck.setFlyBehaviour(&rocket_fly);
+    duck.performFly();
+
+    std::cout<<"duck call"<<std::endl;
+    duck_call.performQuack();
 
     return 0;
 }
