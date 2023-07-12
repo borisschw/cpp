@@ -4,7 +4,9 @@ set(TARGET_NAME app)
 SET(CMAKE_CXX_FLAGS "-std=c++17")
 
 add_executable(${TARGET_NAME}
-                                src/ch1/head_first_dp_ch1.cpp
+                                # src/ch1/head_first_dp_ch1.cpp
+                                # src/ch2_observer/observ_patern_gpt.cpp
+                                src/ch2_observer/my_observer.cpp
                                 # src/binary_tree.cpp
                                 # src/cpp_practice.cpp
                                 # src/my_queue.cpp
