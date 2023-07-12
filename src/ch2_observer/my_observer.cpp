@@ -4,7 +4,7 @@
 
 class ObserverInterface{
     public:
-    virtual void update(float temp, float humidity, float pressure) = 0;
+    virtual void update() = 0;
 };
 
 class Subject{
@@ -42,7 +42,7 @@ public:
     void notifyObservers() override
     {
         for (ObserverInterface* ob : observers){
-            ob->update(temperature, humidity, pressure);
+            ob->update();
         }
     }
 
@@ -55,6 +55,18 @@ public:
         this->humidity = humidity;
         this->pressure = pressure;
         measurementsChanged();
+    }
+
+    float getTemp(){
+        return temperature;
+    }
+    float getHumidity(){
+        return humidity;
+    }
+
+    float getPressure()
+    {
+        return pressure;
     }
 
 private:
@@ -73,10 +85,11 @@ class CurrentConditionsDisplay : ObserverInterface, DisplayInterface{
         weather_data->registerObserver(this);
     }
 
-    void update(float temperature, float humidity, float pressure)
+    void update()
     {
-        this->temperature = temperature;
-        this->humidity = humidity;
+
+        this->temperature = weather_data->getTemp();
+        this->humidity = weather_data->getHumidity();
         display();
     }
 
@@ -100,10 +113,10 @@ class AvgDisplay : ObserverInterface, DisplayInterface{
         weather_data->registerObserver(this);
     }
 
-    void update(float temperature, float humidity, float pressure)
+    void update()
     {
-        this->temperature = temperature;
-        this->humidity = humidity;
+        this->temperature = weather_data->getTemp();
+        this->humidity = weather_data->getHumidity();
         display();
     }
 
@@ -128,9 +141,10 @@ class HeatIndex : ObserverInterface, DisplayInterface{
         weather_data->registerObserver(this);
     }
 
-    void update(float temperature, float humidity, float pressure)
+    void update()
     {
-        this->heatindex = temperature+2 + humidity + 2;
+
+        this->heatindex = weather_data->getTemp()+2 + weather_data->getHumidity() + 2;
         display();
     }
 
